@@ -45,7 +45,7 @@ $Payload = @{
     username = "WeatherReporter" #Can use any name 
             } | ConvertTo-Json
 
-Invoke-RestMethod -Uri 'https://discord.com/api/webhooks/1437544116463337512/5EZ3od1rOjAmKywvrBDBZVwk35arFOD_y7XHlSunhdXNzRhDYY5rbOUVh0iKGW9yZXPB' -Method Post -ContentType 'application/json' -Body $Payload
+Invoke-RestMethod -Uri "{Your Discord Server's Webhook URL -Method Post -ContentType 'application/json" -Body $Payload
 $Information = ""   #Clearing the information variable for next day's data
 } catch {
     # 🛑 Output the full error details
