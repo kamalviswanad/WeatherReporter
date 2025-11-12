@@ -4,6 +4,7 @@ The script uses Open Meteo API to send information of present days' weather base
 You can download the file and use it in your code by calling :
 
 Import-Module '{Filepath}\OpenMeteoModule.psm1'
+
 OpenMeteo -DailyVariable 'argument(s)'
 
 And don't forget to add your Discord Server's Webhook in the OpenMeteo-Module.
