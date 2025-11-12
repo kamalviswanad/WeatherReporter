@@ -1,12 +1,15 @@
 # WeatherReporter
 The script uses Open Meteo API to send information of present days' weather based on input.
 
-You can download the file and use it in your code by calling :
+You can download and use this module by calling this:
+
+--------------------------------------------------------------------
 
 Import-Module '{Filepath}\OpenMeteoModule.psm1'
 
 OpenMeteo -DailyVariable 'argument(s)'
 
+--------------------------------------------------------------------
 And don't forget to add your Discord Server's Webhook in the OpenMeteo-Module.
 
 You can use the following arguments:
@@ -17,7 +20,8 @@ You can use the following arguments:
 You can add more than 1 argument but make sure to add a comma after each argument
 Example: 
 
-Import-Module 'C:\Users\gajav\Downloads\OpenMeteoModule.psm1'
+Import-Module '{Filepath}\OpenMeteoModule.psm1'
+
 OpenMeteo -DailyVariable 'sunrise,sunset'
 
 
