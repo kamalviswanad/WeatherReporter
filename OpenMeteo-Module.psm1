@@ -27,13 +27,13 @@ $URI = "https://api.open-meteo.com/v1/forecast?latitude=$($Latitude)&longitude=$
 
 do{
 $CurrentTime= Get-Date -Format "hh:mm tt"
-if($CurrentTime -match "03:20 PM"){
+if($CurrentTime -match "00:00 PM"){
   try {
     $Result = Invoke-RestMethod -Uri $URI -ErrorAction Stop
 
     #Converting input into an arraylist and converting into a string
-$currentarray = $currentvariable -split "," | ForEach-Object { $_.Trim() }
-$Information 
+$currentarray = $DailyVariable -split "," | ForEach-Object { $_.Trim() }
+$Information = ""
 foreach($variable in $currentarray){
 $a = $Result.daily.$variable[0]
 $Information += "{0}: {1} `n" -f $variable, $a
